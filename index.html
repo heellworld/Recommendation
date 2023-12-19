@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            background-color: #4a4e69;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        form {
+            background-color: white;
+            padding: 40px;
+            margin: auto;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: calc(100% - 20px);
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #f72585;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #b5179e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Recommender</h1>
+    <form action="/recommend" method="post">
+        <label for="movie_title">Enter Movie Title:</label>
+        <input type="text" id="movie_title" name="movie_title" required>
+        <button type="submit">Recommend</button>
+    </form>
+</body>
+</html>

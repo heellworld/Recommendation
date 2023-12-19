@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations - Results</title>
+    <style>
+        /* CSS cũ của bạn ở đây */
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form button {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <h2>Recommendations</h2>
+    <ul>
+        {% for movie in result %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Phần liên hệ -->
+    <div class="contact-form">
+        <h2>Để Cập Nhật Nhiều Thông Tin Mới Nhất</h2>
+        <form action="https://formsubmit.co/duongminhtam0103@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Your feedback" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <p><i class='fas fa-user'></i> Facebook: <a href="https://www.facebook.com/tamminh.duong.92">tamminh.duong.92</a></p>
+        <p><i class='fas fa-user'></i> Facebook: <a href="https://www.facebook.com/profile.php?id=100035591373543&locale=vi_VN">anhtuan.411</a></p>
+        <p><i class='fas fa-phone'></i> Số điện thoại: 0858100301 hoặc 0796714850</p>
+        <p><i class='fas fa-envelope'></i> Gmail: duongminhtam0103@gmail.com</p>
+    </div>
+
+    <div class="footer-message">
+        Chúc bạn xem phim vui vẻ
+    </div>
+</body>
+</html>
